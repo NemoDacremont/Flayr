@@ -1,7 +1,7 @@
 
 # Flayr
 
-## link to the mockup: https://www.figma.com/community/file/933388606548287633
+### link to the mockup: https://www.figma.com/community/file/933388606548287633
 
 ## How to build:
 
