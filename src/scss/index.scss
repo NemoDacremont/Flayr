@@ -5,15 +5,162 @@
 *::before,
 *::after {
 	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 27px;
+
 	padding: 0;
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
 }
 
+body {
+	overflow: auto;
+
+	&::before {
+		content: "";
+		position: absolute;
+		height: 100vh;
+		width: 67vw;
+		top: 0;
+		right: 0;
+		background-size: cover;
+		background-image: url("../assets/background.svg");
+	}
+}
+
 header {
 	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 999;
 
-	padding: 30px 100px 0 0;
+	padding: 30px 100px 0;
 
+	ul {
+		display: flex;
+		list-style-type: none;
+
+		gap: 70px;
+
+		li {
+			a {
+				color: $nav-white;
+				text-decoration: none;
+
+				padding: 2px 4px;
+
+				display: block;
+				position: relative;
+				overflow: hidden;
+
+				&::before {
+					content: "";
+					position: absolute;
+
+					left: 0;
+					bottom: 0px;
+
+					width: 100%;
+					height: 1px;
+					background-color: $nav-white;
+
+					transform: translateX(-100%);
+					transition: transform .25s ease-in-out;
+				}
+
+				&:hover {
+					&::before {
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.landing {
+
+	&__main {
+		display: flex;
+		position: absolute;
+
+		padding-left: 98px;
+		height: 100vh;
+		top: 0;
+
+		align-items: center;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 53px;
+
+		width: 360px;
+	}
+
+	&__title {
+		font-weight: 700;
+		color: $primary;
+		font-size: 48px;
+		line-height: 55px;
+		letter-spacing: .12em;
+
+		text-transform: uppercase;
+		width: 361px;
+	}
+
+	&__desc {
+		font-family: "Lato", sans-serif;
+		font-weight: 300;
+		letter-spacing: .12em;
+		line-height: 41px;
+
+		color: $desc-color;
+
+		text-transform: initial;
+
+		width: 347px;
+	}
+
+	&__browse {
+		background-color: $primary;
+
+		color: $nav-white;
+		font-size: 21px;
+		line-height: 31.5px;
+		font-weight: 600;
+
+		text-transform: initial;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		width: 160px;
+		border: 2px solid $primary;
+		transition: color .25s ease-in-out, background-color .25s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			color: $primary;
+			background-color: transparent;
+		}
+
+		&:active {
+			outline: 1px dotted $nav-white;
+		}
+	}
+
+	&__shoe {
+		position: fixed;
+		margin: auto 0 auto;
+		right: 19vw;
+		width: 612px;
+		height: 408px;
+		transform: scale( 100vw / 1280px );
+		background-image: url("../assets/shoe.png");
+	}
 }
