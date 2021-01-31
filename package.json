@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build:ts": "tsc",
-    "build:sass": "sass ./src/scss ./dist/css",
+    "build:sass": "sass src/scss/index.scss dist/css/index.css",
 
     "dev:ts": "tsc --watch",
-    "dev:sass": "sass ./src/scss/ ./dist/css --watch",
+    "dev:sass": "sass src/scss/index.scss dist/css/index.css --watch",
 
     "build": "./build.sh"
   },
