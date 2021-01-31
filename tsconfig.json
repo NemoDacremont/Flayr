@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "commonJS",
+		"removeComments": true,
+		"outDir": "./dist/js",
+		"strict": true
+	},
+	"files": [
+		"src/ts/index.ts"
+	],
+	"include": [
+		"src/ts/*/*.ts"
+	]
+}
